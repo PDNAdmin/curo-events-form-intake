@@ -21,7 +21,7 @@ Separate from the Pastor Dami form; it lives on its own domain.
    - Who has access: **Anyone**
 
    Deploy, and copy the **Web app URL** (it ends in `/exec`). Open it in a browser: it should say "Curo sign-ups are connected."
-5. Put that link in `.env.local` as `VITE_SHEET_URL=…` to test on your computer, and in Vercel (below).
+5. Put that link in `.env.local` as `SHEET_URL=…` to test on your computer, and in Vercel (below).
 
 ## Try it on your computer
 
@@ -30,13 +30,13 @@ npm install
 npm run dev
 ```
 
-Without `VITE_SHEET_URL` it runs in **test mode**: nothing is sent, the sign-up is kept in your browser, and the thank-you message says so.
+Without `SHEET_URL` it runs in **test mode**: nothing is sent, the sign-up is kept in your browser, and the thank-you message says so.
 
 ## Put it live (GitHub + Vercel)
 
 1. Push this folder to a new GitHub repository.
 2. In Vercel, "Add New Project" and import it. Vercel detects Vite; keep the defaults.
-3. Vercel → Project → Settings → **Environment Variables**: add `VITE_SHEET_URL` with the web app link.
+3. Vercel → Project → Settings → **Environment Variables**: add `SHEET_URL` with the web app link.
 4. Redeploy (the link is built into the page), then add your domain under Settings → Domains.
 
 ## How it behaves

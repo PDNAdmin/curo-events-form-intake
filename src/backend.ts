@@ -1,10 +1,10 @@
 // Sends a sign-up to the Google Sheet. A small Apps Script attached to the
 // sheet (google-sheet/Code.gs) adds a row and sends the emails. Setup: README.
-// Without VITE_SHEET_URL it runs in test mode (saved in this browser only).
+// Without SHEET_URL it runs in test mode (saved in this browser only).
 
 export type Lead = { name: string; email: string };
 
-const SHEET_URL = import.meta.env.VITE_SHEET_URL as string | undefined;
+const SHEET_URL = import.meta.env.SHEET_URL as string | undefined;
 export const testMode = !SHEET_URL;
 
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
